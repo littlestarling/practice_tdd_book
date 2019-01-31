@@ -8,3 +8,4 @@ gem 'rspec'
 
 # for circleci setting
 gem 'rspec_junit_formatter'
+gem 'rake'

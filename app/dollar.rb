@@ -11,6 +11,6 @@ class Dollar
   end
 
   def equals(obj)
-    true
+    @amount == obj.amount
   end
 end

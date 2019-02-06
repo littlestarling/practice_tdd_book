@@ -13,5 +13,11 @@ RSpec.describe 'Dollar' do
       expect(product.amount).to eq 15
     end
   end
+
+  describe '#equality' do
+    it 'equals comparing value objects' do
+      expect(Dollar.new(5).equals(Dollar.new(5))).to be_truthy
+    end
+  end
 end
 

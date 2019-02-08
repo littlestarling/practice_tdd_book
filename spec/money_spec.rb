@@ -1,8 +1,7 @@
 # frozen_string_literal: true
 require 'rspec'
 require 'spec_helper'
-require_relative '../app/dollar'
-require_relative '../app/franc'
+Dir[File.dirname(__FILE__) + '/../app/*.rb'].each { |file| require file }
 
 RSpec.describe 'Dollar' do
   describe '#multiplication' do

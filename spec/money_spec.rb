@@ -20,3 +20,12 @@ RSpec.describe 'Dollar' do
   end
 end
 
+RSpec.describe 'Franc' do
+  describe '#multiplication' do
+    it do
+      five = Franc.new(5)
+      expect(five.times(2)).to eql Franc.new(10)
+      expect(five.times(3)).to eql Franc.new(15)
+    end
+  end
+end

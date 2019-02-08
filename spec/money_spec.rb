@@ -2,6 +2,7 @@
 require 'rspec'
 require 'spec_helper'
 require_relative '../app/dollar'
+require_relative '../app/franc'
 
 RSpec.describe 'Dollar' do
   describe '#multiplication' do

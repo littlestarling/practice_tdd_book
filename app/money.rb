@@ -7,7 +7,7 @@ class Money
   end
 
   def equals(money)
-    @amount == money.amount
+    self.class == money.class && @amount == money.amount
   end
 
   # NOTE: 同値性比較する機能を提供する

@@ -1,5 +1,6 @@
 # frozen_string_literal: true
-class Dollar
+require_relative 'money'
+class Dollar < Money
   attr_accessor :amount
 
   def initialize(amount)

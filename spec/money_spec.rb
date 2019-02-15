@@ -7,8 +7,8 @@ RSpec.describe 'Dollar' do
   describe '#multiplication' do
     it do
       five = Dollar.new(5)
-      expect(five.times(2)).to eql Dollar.new(10)
-      expect(five.times(3)).to eql Dollar.new(15)
+      expect(five.times(2)).to eq Dollar.new(10)
+      expect(five.times(3)).to eq Dollar.new(15)
     end
   end
 

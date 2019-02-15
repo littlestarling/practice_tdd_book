@@ -18,4 +18,5 @@ class Money
       false
     end
   end
+  alias :== :eql?
 end

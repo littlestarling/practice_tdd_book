@@ -14,6 +14,10 @@ class Money
     Dollar.new(amount)
   end
 
+  def self.franc(amount)
+    Franc.new(amount)
+  end
+
   # NOTE: 同値性比較する機能を提供する
   def eql?(obj)
     if obj.is_a?(Money)

@@ -10,6 +10,14 @@ class Money
     self.class == money.class && @amount == money.amount
   end
 
+  def self.dollar(amount)
+    Dollar.new(amount)
+  end
+
+  def self.franc(amount)
+    Franc.new(amount)
+  end
+
   # NOTE: 同値性比較する機能を提供する
   def eql?(obj)
     if obj.is_a?(Money)
@@ -18,4 +26,5 @@ class Money
       false
     end
   end
+  alias :== :eql?
 end

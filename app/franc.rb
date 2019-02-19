@@ -8,6 +8,6 @@ class Franc < Money
   end
 
   def times(multiplier)
-    return Franc.new(@amount * multiplier, nil)
+    return Money.franc(@amount * multiplier)
   end
 end

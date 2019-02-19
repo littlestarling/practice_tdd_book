@@ -1,11 +1,13 @@
 # frozen_string_literal: true
 require_relative 'money'
 class Franc < Money
-  def times(multiplier)
-    return Franc.new(@amount * multiplier)
+
+  def initialize(amount)
+    @currency = 'CHF'
+    super(amount)
   end
 
-  def currency
-    'CHF'
+  def times(multiplier)
+    return Franc.new(@amount * multiplier)
   end
 end

@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 class Money
   attr_accessor :amount
+  attr_accessor :currency
 
   def initialize(amount)
     @amount = amount
@@ -8,10 +9,6 @@ class Money
 
   def equals(money)
     self.class == money.class && @amount == money.amount
-  end
-
-  def currency
-    raise NotImplementedError
   end
 
   def self.dollar(amount)

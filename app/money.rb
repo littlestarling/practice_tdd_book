@@ -16,7 +16,7 @@ class Money
   end
 
   def self.franc(amount)
-    Franc.new(amount)
+    Franc.new(amount, nil)
   end
 
   # NOTE: 同値性比較する機能を提供する

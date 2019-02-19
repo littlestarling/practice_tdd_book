@@ -10,6 +10,10 @@ class Money
     self.class == money.class && @amount == money.amount
   end
 
+  def currency
+    raise NotImplementedError
+  end
+
   def self.dollar(amount)
     Dollar.new(amount)
   end

@@ -1,9 +1,11 @@
 # frozen_string_literal: true
 class Money
   attr_accessor :amount
+  attr_accessor :currency
 
-  def initialize(amount)
+  def initialize(amount, currency)
     @amount = amount
+    @currency = currency
   end
 
   def equals(money)
@@ -11,11 +13,11 @@ class Money
   end
 
   def self.dollar(amount)
-    Dollar.new(amount)
+    Dollar.new(amount, 'USD')
   end
 
   def self.franc(amount)
-    Franc.new(amount)
+    Franc.new(amount, 'CHF')
   end
 
   # NOTE: 同値性比較する機能を提供する

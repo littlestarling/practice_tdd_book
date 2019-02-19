@@ -32,3 +32,10 @@ RSpec.describe 'Franc' do
     end
   end
 end
+
+RSpec.describe 'Currency' do
+  it 'returns currency unit string' do
+    expect(Money.dollar(1).currency).to eq 'USD'
+    expect(Money.franc(1).currency).to eq 'CHF'
+  end
+end

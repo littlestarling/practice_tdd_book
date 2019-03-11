@@ -17,7 +17,7 @@ class Money
   end
 
   def self.dollar(amount)
-    Dollar.new(amount, 'USD')
+    Money.new(amount, 'USD')
   end
 
   def self.franc(amount)

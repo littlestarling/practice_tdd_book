@@ -19,11 +19,12 @@ RSpec.describe 'Money' do
       expect(Money.dollar(5).equals(Money.franc(5))).to be_falsy
     end
   end
-end
 
-RSpec.describe 'Currency' do
-  it 'returns currency unit string' do
-    expect(Money.dollar(1).currency).to eq 'USD'
-    expect(Money.franc(1).currency).to eq 'CHF'
+  describe 'currency' do
+    it 'returns currency unit string' do
+      expect(Money.dollar(1).currency).to eq 'USD'
+      expect(Money.franc(1).currency).to eq 'CHF'
+    end
   end
 end
+

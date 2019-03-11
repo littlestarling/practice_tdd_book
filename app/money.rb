@@ -8,16 +8,20 @@ class Money
     @currency = currency
   end
 
+  def times(multiplier)
+    Money.new(amount * multiplier, currency)
+  end
+
   def equals(money)
     self.currency == money.currency && @amount == money.amount
   end
 
   def self.dollar(amount)
-    Dollar.new(amount, 'USD')
+    Money.new(amount, 'USD')
   end
 
   def self.franc(amount)
-    Franc.new(amount, 'CHF')
+    Money.new(amount, 'CHF')
   end
 
   # NOTE: 同値性比較する機能を提供する

@@ -3,7 +3,7 @@ require 'rspec'
 require 'spec_helper'
 Dir[File.dirname(__FILE__) + '/../app/*.rb'].each { |file| require file }
 
-RSpec.describe 'Dollar' do
+RSpec.describe 'Money' do
   describe '#multiplication' do
     it do
       five = Money.dollar(5)

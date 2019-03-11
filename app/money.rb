@@ -9,7 +9,7 @@ class Money
   end
 
   def equals(money)
-    self.class == money.class && @amount == money.amount
+    self.currency == money.currency && @amount == money.amount
   end
 
   def self.dollar(amount)

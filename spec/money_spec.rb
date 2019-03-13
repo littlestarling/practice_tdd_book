@@ -29,7 +29,8 @@ RSpec.describe 'Money' do
 
   describe 'addition' do
     it 'returns simple added amount' do
-      sum = Money.dollar(5).plus(Money.dollar(5))
+      five = Money.dollar(5)
+      sum = five.plus(five)
       bank = Bank.new
       reduced = bank.reduce(sum, 'USD')
       expect(reduced).to eq(Money.dollar(10))

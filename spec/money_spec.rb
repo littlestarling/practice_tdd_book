@@ -19,11 +19,22 @@ RSpec.describe 'Money' do
       expect(Money.dollar(5).equals(Money.franc(5))).to be_falsy
     end
   end
-end
 
-RSpec.describe 'Currency' do
-  it 'returns currency unit string' do
-    expect(Money.dollar(1).currency).to eq 'USD'
-    expect(Money.franc(1).currency).to eq 'CHF'
+  describe 'currency' do
+    it 'returns currency unit string' do
+      expect(Money.dollar(1).currency).to eq 'USD'
+      expect(Money.franc(1).currency).to eq 'CHF'
+    end
+  end
+
+  describe 'addition' do
+    it 'returns simple added amount' do
+      five = Money.dollar(5)
+      sum = five.plus(five)
+      bank = Bank.new
+      reduced = bank.reduce(sum, 'USD')
+      expect(reduced).to eq(Money.dollar(10))
+    end
   end
 end
+

@@ -11,6 +11,7 @@ class Money
   def plus(addend)
     Money.new(amount + addend.amount, currency)
   end
+  alias :+ :plus
 
   def times(multiplier)
     Money.new(amount * multiplier, currency)

@@ -11,6 +11,7 @@ class Money
   def plus(addend)
     Money.new(amount + addend.amount, currency)
   end
+  alias :+ :plus
 
   def times(multiplier)
     Money.new(amount * multiplier, currency)
@@ -18,6 +19,10 @@ class Money
 
   def equals(money)
     self.currency == money.currency && @amount == money.amount
+  end
+
+  def reduce(to)
+    self
   end
 
   def self.dollar(amount)

@@ -36,5 +36,12 @@ RSpec.describe 'Money' do
       expect(reduced).to eq(Money.dollar(10))
     end
   end
-end
 
+  describe 'reduce' do
+    it 'returns 1 dollar' do
+      bank = Bank.new
+      result = bank.reduce(Money.dollar(1), 'USD')
+      expect(result).to eq(Money.dollar(1))
+    end
+  end
+end

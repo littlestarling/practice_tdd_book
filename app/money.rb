@@ -21,6 +21,10 @@ class Money
     self.currency == money.currency && @amount == money.amount
   end
 
+  def reduce(to)
+    self
+  end
+
   def self.dollar(amount)
     Money.new(amount, 'USD')
   end
